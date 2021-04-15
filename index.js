@@ -20,7 +20,7 @@ client.on('message', msg => {
   if (msg.content.toLowerCase().startsWith("!warn") && msg.mentions.users.first()) {
     msg.channel.send('The user is warned.' + ' User id : ' + msg.mentions.users.first())
     msg.author.send('You have warned'+ msg.content.slice(5))
-    msg.mentions.users.first().send('You have been warned by ' + msg.content.slice(5))
+    msg.mentions.users.first().send('You have been warned by ' + msg.author)
 
   }else if (msg.content.startsWith('!warn')) {
     msg.channel.send('PLS specify someone to warn. User id : none')
